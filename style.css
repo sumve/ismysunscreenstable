@@ -1,31 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f3f4f6;
-    padding: 40px;
-  }
-  
-  .container {
-    max-width: 600px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-  }
-  
-  textarea {
-    width: 100%;
-    height: 150px;
-    margin-bottom: 10px;
-    font-size: 16px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-  }
-  
-  #result {
-    margin-top: 20px;
-    font-weight: bold;
-  }
-  
+  font-family: "Pixelify Sans", sans-serif;
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(
+  rgba(255, 245, 224, 0.85),
+  #b9733a6c
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  color: #5c3c1d; 
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #fff8f0; 
+  padding: 30px 25px;
+  border-radius: 25px; 
+  border: 5px solid #84572f; 
+  box-shadow: 0 10px 25px rgba(132, 87, 47, 0.3); 
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #84572f; 
+}
+
+textarea {
+  width: 100%;
+  height: 220px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-family: "Pixelify Sans", sans-serif;
+  border-radius: 10px; 
+  border: 2px solid #b68f63; 
+  resize: vertical;
+  background-color: #fff5e6; 
+  color: #5c3c1d; 
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #84572f; 
+  box-shadow: 0 0 10px rgba(132, 87, 47, 0.5); 
+}
+
+textarea::placeholder {
+  color: #84572f;
+  opacity: 1;
+}
+
+.button-wrapper {
+  margin-bottom: 15px;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 16px;            
+  font-weight: 600;
+  color: #5c3a1a;             
+  text-transform: uppercase;
+  padding: 10px 20px;       
+  background: #f4e1d2;        
+  border: 2px solid #b9733a;  
+  border-radius: 0.75em;
+  transform-style: preserve-3d;
+  transition:
+    background 150ms cubic-bezier(0, 0, 0.58, 1),
+    transform 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #d19a4c86;          
+  border-radius: inherit;
+  box-shadow:
+    0 0 0 2px #b9733a,
+    0 0.5em 0 0 #f9dabb;
+  transform: translate3d(0, 0.5em, -1em);
+  transition:
+    transform 150ms cubic-bezier(0, 0, 0.58, 1),
+    box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+  z-index: -1;
+}
+
+button:hover {
+  background: #f9dabb;          
+  transform: translate(0, 0.2em);
+}
+
+button:hover::before {
+  box-shadow:
+    0 0 0 2px #b9733a,
+    0 0.4em 0 0 #f9dabb;
+  transform: translate3d(0, 0.4em, -1em);
+}
+
+button:active {
+  background: #f9dabb;
+  transform: translate(0, 0.6em);
+}
+
+button:active::before {
+  box-shadow: 0 0 0 2px #b9733a, 0 0 #f9dabb;
+  transform: translate3d(0, 0, -1em);
+}
+
+#result {
+  margin-top: 30px;
+  font-weight: bold;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 1rem;
+  text-align: left;
+  background-color: #fff5e6;
+  padding: 15px;
+  border-radius: 20px;
+  border: 2px dashed #b68f63;
+  word-wrap: break-word;
+  box-shadow: inset 0 0 5px rgba(182, 143, 99, 0.3);
+}
+
+#result:empty {
+  display:none;
+}
