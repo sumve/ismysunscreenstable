@@ -25,6 +25,7 @@ body {
 
 .container {
   max-width: 600px;
+  width: 95%;
   margin: auto;
   background: #fff8f0; 
   padding: 30px 25px;
@@ -179,7 +180,7 @@ button:active::before {
 .logo{
   font-weight: bold;
   font-size: 1.5rem;
-  color: #5c3a1a;
+  color: #84572f;
 }
 
 .nav-links{
@@ -213,6 +214,26 @@ button:active::before {
   font-size: 1.5rem;
   cursor: pointer;
   margin-left: auto;
+  color: #84572f;
+}
+
+.nav-links li a {
+  color: #84572f; /* or your navbar color */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links li a:visited {
+  color: #84572f; /* same as normal state */
+}
+
+.nav-links li a:hover {
+  background-color: #5c3a1a;
+  color: #f2cfa6;
+}
+
+.nav-links li a:active {
+  color: #f2cfa6;
 }
 
 @media (max-width: 768px) {
@@ -256,6 +277,9 @@ button:active::before {
   text-align: justify;
 }
 
+.container2{
+  width: 85%;
+}
 .contact{
   padding: 0%;
 }
