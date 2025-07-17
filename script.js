@@ -65,14 +65,31 @@ function checkPhotostability() {
     navLinks.classList.toggle("active");
   });
 
-  document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
   const response = document.getElementById("formResponse");
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    response.textContent = "Thank you for reaching out! I’ll get back to you soon! :)";
-    form.reset();
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      if (res.ok) {
+        response.textContent = "Thank you for reaching out! I’ll get back to you soon! :)";
+        form.reset();
+      } else {
+        response.textContent = "Oops! Something went wrong. Please try again.";
+      }
+    } catch (error) {
+      response.textContent = "Network error. Please try again later.";
+    }
   });
 });
+
