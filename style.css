@@ -333,6 +333,10 @@ button:active::before {
   margin-bottom: 1em;
 }
 
+h2{
+  word-wrap:break-word;
+}
+
 .container4 {
   max-width: 600px;
   margin: auto;

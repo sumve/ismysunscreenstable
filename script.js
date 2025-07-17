@@ -1,6 +1,8 @@
 function checkPhotostability() {
   const input = document.getElementById("ingredients").value.toLowerCase();
 
+  input = input.replace(/[\.,;:()\-\n\r]/g, " ").replace(/\s+/g, " ");
+
   const avobenzone = [
     "avobenzone",
     "butyl methoxydibenzoylmethane",
