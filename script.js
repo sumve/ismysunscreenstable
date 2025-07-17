@@ -57,3 +57,22 @@ function checkPhotostability() {
 
   document.getElementById("result").textContent = result;
 }
+
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("navLinks");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  const response = document.getElementById("formResponse");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    response.textContent = "Thank you for reaching out! I’ll get back to you soon! :)";
+    form.reset();
+  });
+});
