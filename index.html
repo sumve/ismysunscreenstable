@@ -72,12 +72,12 @@
     <div class="container contact">
     <section id="contact" class="contact-section">
   <h2 class="us">Contact Us</h2>
-  <form id="contactForm">
+  <form id="contactForm" action="https://formspree.io/f/xyzpzegy" method="POST">
     <label for="name">Name</label>
     <input type="text" id="name" name="name" placeholder="Your name" required />
 
     <label for="email">Email</label>
-    <input type="email" id="email" name="email" placeholder="Your email" required />
+    <input type="email" id="email" name="email" placeholder="Your email" />
 
     <label for="message">Message</label>
     <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
@@ -89,9 +89,13 @@
   </div>
   <p id="formResponse" aria-live="polite"></p>
 </section>
-
     <footer class="footer">
-      <p>&copy; 2025 SunNotScreen. Built with ☀️ & curiosity by SumV.</p>
+      <div class="socials">
+    <a href="https://github.com/sumve/ismysunscreenstable" target="_blank" rel="noopener noreferrer"><img src="github.png" alt="GitHub" /></a>
+    <a href="https://linkedin.com/in/sumedha-verma" target="_blank" rel="noopener noreferrer"><img src="linkedin.png" alt="LinkedIn" /></a>
+    <a href="https://www.instagram.com/sumvidk/" target="_blank" rel="noopener noreferrer"><img src="instagram.png" alt="Instagram" /></a>
+  </div>
+      <p>&copy; 2025 SunNotScreen. Built with ☀️ by SumV.</p>
     </footer>
     <script src="script.js"></script>
   </body>
