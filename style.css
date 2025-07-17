@@ -168,7 +168,6 @@ button:active::before {
 
 .navbar{
   display: flex;
-  justify-content:;
   align-items: center;
   background-color: white;
   padding: 0.5rem 1rem;
@@ -393,6 +392,11 @@ button:active::before {
   cursor: pointer;
 }
 
+.socials img{
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
 
 .footer {
   margin-top: 50px;
@@ -404,12 +408,13 @@ button:active::before {
   border-top: 5px solid #84572f;
 }
 
-.footer-links {
+.socials {
   margin-top: 10px;
   display: flex;
   justify-content: center;
-  gap: 1.2rem;
+  gap: 1rem;
   flex-wrap: wrap;
 }
+
 
 
