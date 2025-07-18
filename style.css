@@ -420,5 +420,11 @@ h2{
   flex-wrap: wrap;
 }
 
+#visits {
+  color: #333;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 8px;
+}
 
 
