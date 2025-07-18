@@ -1,5 +1,5 @@
 function checkPhotostability() {
-  const input = document.getElementById("ingredients").value.toLowerCase();
+  let input = document.getElementById("ingredients").value.toLowerCase();
 
   input = input.replace(/[\.,;:()\-\n\r]/g, " ").replace(/\s+/g, " ");
 
